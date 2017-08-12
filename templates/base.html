@@ -94,7 +94,7 @@ $(document).ready(function(){
     todayBtn: "linked",
     autoclose: true
   });
-
+  
   $("#reserveBtn").click(function(event) {
     event.preventDefault();
     var reserveData = $("#reserveForm-1, #reserveForm-2").serialize();
@@ -104,18 +104,18 @@ $(document).ready(function(){
       type: 'POST',
       data: reserveData,
 
-      success: function(content) {
-          $("#reserveModal").hide();
-          $("html").html(content)
-        },
-      error: function(){
-          alert(reserveData);
-        }
-    });
+      success: function(content){
+        $("#reserveModal").hide();
+        $("html").html(content)
+      },
 
+      error: function() {
+        alert(reserveData);
+      }
+    });
+    
     return false;
   });
-
 
 });
 

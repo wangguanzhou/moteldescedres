@@ -10,6 +10,6 @@ def homepage(request):
         reserveData['phoneNumber'] = request.POST['phoneNumber']
         context['reserveData'] = reserveData
         return render(request, 'reserveresponse.html', context)
-        pass;
+
     else:
         return render(request, 'homepage.html', context)
