@@ -1,0 +1,80 @@
+{% extends "./base.html" %}
+{% load static %}
+
+{% block reserve-room %}
+
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading text-center" style="font-weight: bold; font-size: 20px">Book My Room</div>
+    <div class="panel-body">
+      <div class="col-md-2"></div>
+
+      <div class="col-md-8">
+
+        <form class="form" id="reserveForm" method="POST">
+          {% csrf_token %}
+
+          <div class="form-group col-md-6">
+            <label class="control-label">Select the room type</label>
+            {{ reserveForm.room_type }}
+          </div>
+
+          <div class="form-group col-md-3">
+            <label class="control-label">Number of rooms</label>
+            {{ reserveForm.num_of_rooms }}
+          </div>
+
+          <div class="form-group col-md-3">
+          </div>
+
+          <div class="form-group col-md-6">
+            <label class="control-label">Check-in date</label>
+            <div class="input-group date">
+              {{ reserveForm.checkin_date }}
+              <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+            </div>
+          </div>
+
+          <div class="form-group col-md-6">
+            <label class="control-label">Check-out date</label>
+            <div class="input-group date">
+              {{ reserveForm.checkout_date }}
+              <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+            </div>
+          </div>
+
+          <div class="form-group col-md-3">
+            <label class="control-label">Number of adults</label>
+            <select name="numOfAdults" class="form-control">
+              <option value="1">1</option> 
+              <option value="2">2</option> 
+              <option value="3">3</option> 
+            </select>
+          </div>
+
+          <div class="form-group col-md-3">
+            <label class="control-label">Number of children</label>
+            <select name="numOfChildren" class="form-control">
+              <option value="0">0</option> 
+              <option value="1">1</option> 
+              <option value="2">2</option> 
+              <option value="3">3</option> 
+            </select>
+          </div>
+
+          <div class="col-md-12 text-center">
+            <button id="reserveBtn" type="submit" class="btn btn-primary">Send</button>
+          </div>
+
+        </form>
+      </div>
+
+      <div class="col-md-2"></div>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+

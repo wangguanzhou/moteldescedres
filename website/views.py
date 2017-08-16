@@ -1,15 +1,21 @@
 from django.shortcuts import render
+from .forms import *
 
 # Create your views here.
 
 def homepage(request):
     context = {}
-    if request.is_ajax():
-        reserveData = {}
-        reserveData['clientName'] = request.POST['clientName']
-        reserveData['phoneNumber'] = request.POST['phoneNumber']
-        context['reserveData'] = reserveData
+    return render(request, 'homepage.html', context)
+
+def reserve(request):
+    context = {}
+    if request.POST:
+        reserveForm = ReserveForm(request.POST)
+        context['reserveForm'] = reserveForm
+
         return render(request, 'reserveresponse.html', context)
 
     else:
-        return render(request, 'homepage.html', context)
+        reserveForm = ReserveForm()
+        context['reserveForm'] = reserveForm
+        return render(request, 'reserve.html', context)

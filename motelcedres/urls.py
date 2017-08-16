@@ -21,6 +21,7 @@ from website import views
 
 urlpatterns = [
     url(r'^$', views.homepage),
+    url(r'^reserve/$', views.reserve),
     url(r'^admin/', admin.site.urls),
 ]
 
