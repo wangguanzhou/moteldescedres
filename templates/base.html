@@ -31,13 +31,12 @@ body {
 
       .container {
         background-color: #FFFFFF;
-        padding: 10px;
+        padding: 15px;
       }
 
       .row {
         margin-left: 0;
         margin-right: 0;
-        padding-bottom: 20px;	
       }
 
       footer {
@@ -45,7 +44,7 @@ body {
       }
 
       .navbar-brand {
-        font-size: 25px;
+        font-size: 28px;
       }
 
       .navbar > ul > li {
@@ -58,6 +57,16 @@ body {
       .icon-bar {
         background: #FFFFFF;
       }
+
+      .room-gallery {
+        padding: 20px 0px;
+      }
+
+      .room-text {
+        padding: 20px 40px;
+        font-size: 18px;
+      }
+
 
       #overlay {
         position: absolute;
@@ -112,11 +121,11 @@ $(document).ready(function(){
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>                        
           </button>
-          <a class="navbar-brand" href="#">Motel des Cedres</a>
+          <a class="navbar-brand" href="/">Motel des Cedres</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="#">Contact Us</a></li>
             <li><a href="#">Francais</a></li>
           </ul>
@@ -128,6 +137,10 @@ $(document).ready(function(){
     {% endblock %}
 
     {% block reserve-room %}
+    {% endblock %}
+
+
+    {% block rooms-gallery %}
     {% endblock %}
 
 

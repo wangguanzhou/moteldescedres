@@ -19,3 +19,7 @@ def reserve(request):
         reserveForm = ReserveForm()
         context['reserveForm'] = reserveForm
         return render(request, 'reserve.html', context)
+
+
+def showrooms(request):
+    return render(request, 'rooms.html', {})
