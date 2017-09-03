@@ -26,13 +26,24 @@ body {
   font-family: 'Muli', sans-serif;
   font-size: 14px;
   background-color: #74AFAD;
-  padding: 10px;
 }
+
+      @media (min-width: 700px) {
+        body {
+          padding: 10px 40px;
+        }
+      }
 
       .container {
         background-color: #FFFFFF;
-        padding: 15px;
+        padding: 16px;
       }
+
+      .container-fluid {
+        background-color: #FFFFFF;
+        padding: 16px;
+      }
+
 
       .row {
         margin-left: 0;
@@ -44,10 +55,10 @@ body {
       }
 
       .navbar-brand {
-        font-size: 28px;
+        font-size: 32px;
       }
 
-      .navbar > ul > li {
+      .navbar-nav > ul > li {
       }
 
       .navbar .navbar-header > button {
@@ -113,7 +124,7 @@ $(document).ready(function(){
 
   <body>
 
-    <div class="container">
+    <div class="container-fluid">
       <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -124,7 +135,7 @@ $(document).ready(function(){
           <a class="navbar-brand" href="/">Motel des Cedres</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav navbar-right" style="font-size: 16px">
             <li><a href="/">Home</a></li>
             <li><a href="#">Contact Us</a></li>
             <li><a href="#">Francais</a></li>
@@ -144,7 +155,7 @@ $(document).ready(function(){
     {% endblock %}
 
 
-    <div class="container">
+    <div class="container-fluid">
       <footer class="footer text-center">
         <span class="text-muted">Copyright &copy; 2017 Motel des Cedres</span>
       </footer>
