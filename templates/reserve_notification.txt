@@ -1,0 +1,13 @@
+A reservation request has been made via moteldescedres.ca:
+
+Client Name: {{ reserveData.client_name }}
+Client Phone: {{ reserveData.client_phone }}
+Client Email: {{ reserveData.client_email }}
+Client Message: {{ reserveData.client_message }}
+
+Check-in: {{ reserveData.checkin_date }}
+Check-out: {{ reserveData.checkout_date }}
+Room type: {{ reserveData.room_type }}
+Num of rooms: {{ reserveData.num_of_rooms }}
+Num of adults: {{ reserveData.num_of_adults }}
+Num of children: {{ reserveData.num_of_children }}

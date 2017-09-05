@@ -2,8 +2,8 @@ from django import forms
 
 ROOM_TYPES = (
         ('Economic', 'Economic(1 Double bed)'),
-        ('Standard', 'Standard(1 Queen bed)'),
-        ('Standard', 'Standard(2 Double bed)'),
+        ('Standard-1', 'Standard(1 Queen bed)'),
+        ('Standard-2', 'Standard(2 Double bed)'),
         ('Superior', 'Superior(1 Queen bed)'),
         )
 

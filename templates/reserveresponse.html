@@ -4,8 +4,9 @@
 {% block reserve-response %}
 
 <div class="container-fluid">
-  <p> {{ reserveForm.checkin_date }} </p>
-  <p> {{ contactForm.client_name }} </p>
+  <p> {{ reserveData.client_name }} </p>
+  <p> {{ reserveData.client_phone }} </p>
+  <p> {{ reserveData.client_email }} </p>
 </div>
 
 {% endblock %}
