@@ -61,13 +61,14 @@ def sendReservationEmail(reserveData):
     emailTo1 = 'moteldescedres@videotron.ca'
     emailTo2 = 'alexwang74@gmail.com'
 
-    send_mail(emailSubject, emailBody, emailFrom, [emailTo1, emailTo2], fail_silently =False)
+    send_mail(emailSubject, emailBody, emailFrom, [emailTo2], fail_silently =False)
 
 def sendSMSviaNexmo(smsContent):
     params = {
             'api_key': '8f27294a',
-            'api_secret': 'f44647eee9a437f0',
-            'to': '15145717719',
+            'api_secret': 'Peel1000Idcc',
+            'to': '15147757799',
+            # 'to': '18199436233',
             'from': '12508006799',
             'text': smsContent
             }
