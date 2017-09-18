@@ -4,9 +4,25 @@
 {% block reserve-response %}
 
 <div class="container-fluid">
-  <p> {{ reserveData.client_name }} </p>
-  <p> {{ reserveData.client_phone }} </p>
-  <p> {{ reserveData.client_email }} </p>
+	<div class="col-md-2"></div>
+	<div class="col-md-8">
+		<div class="jumbotron">
+			<h3>Dear {{ reserveData.client_name }}, we have received your reservation request. </h3>
+			<table class="table table-sm table-responsive">
+				<tbody>
+					<tr><td>Check-in</td> <td>{{ reserveData.checkin_date }}</td></tr>
+					<tr><td>Check-out</td> <td>{{ reserveData.checkout_date }}</td></tr>
+					<tr><td>Room</td> <td>{{ reserveData.num_of_rooms }} {{ reserveData.room_type }}</td></tr>
+					<tr><td>Adults</td> <td>{{ reserveData.num_of_adults }}</td></tr>
+					<tr><td>Children</td> <td>{{ reserveData.num_of_children }}</td></tr>
+				</tbody>
+			</table>
+			<h3>We will confirm your reservation via email or phone soon. Thanks.</h3>
+
+		</div>
+	
+	</div>
+	<div class="col-md-2"></div>
 </div>
 
 {% endblock %}

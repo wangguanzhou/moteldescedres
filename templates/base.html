@@ -22,87 +22,92 @@
 
     <style>
 
+html,body {
+  height: 100%;
+}
+
 body {
   font-family: 'Muli', sans-serif;
   font-size: 14px;
   background-color: #74AFAD;
 }
 
-      @media (min-width: 700px) {
-        body {
-          padding: 10px 40px;
+        @media (min-width: 700px) {
+          body {
+            padding: 10px 40px;
+          }
+
+          .pricetable {
+            font-size: 20px;
+          }
         }
 
-        .pricetable {
+        .container {
+          background-color: #FFFFFF;
+          padding: 16px;
+        }
+
+        .container-fluid {
+          background-color: #FFFFFF;
+          padding: 16px;
+        }
+
+
+        .row {
+          margin-left: 0;
+          margin-right: 0;
+        }
+
+        footer {
+          padding: 10px;
+        }
+
+        .navbar-brand {
+          font-size: 32px;
+        }
+
+        .navbar-nav > ul > li {
+        }
+
+        .navbar .navbar-header > button {
+          background: #74AFAD;
+        }
+
+        .icon-bar {
+          background: #FFFFFF;
+        }
+
+        .room-gallery {
+          padding: 20px 0px;
+        }
+
+        .room-text {
+          padding: 20px 40px;
+          font-size: 18px;
+        }
+
+        .price {
+          font-weight: bold;
+          color: #FF0000;
+        }
+
+
+        #overlay {
+          position: absolute;
+          display: block;
+          width: 40%;
+          height: 50%;
+          top: 5%;
+          left: 5%;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(0,0,0,0.3);
+          z-index: 2;
+          cursor: pointer;
+          padding: 20px;
+          color: white;
           font-size: 20px;
         }
-      }
-
-      .container {
-        background-color: #FFFFFF;
-        padding: 16px;
-      }
-
-      .container-fluid {
-        background-color: #FFFFFF;
-        padding: 16px;
-      }
-
-
-      .row {
-        margin-left: 0;
-        margin-right: 0;
-      }
-
-      footer {
-        padding: 10px;
-      }
-
-      .navbar-brand {
-        font-size: 32px;
-      }
-
-      .navbar-nav > ul > li {
-      }
-
-      .navbar .navbar-header > button {
-        background: #74AFAD;
-      }
-
-      .icon-bar {
-        background: #FFFFFF;
-      }
-
-      .room-gallery {
-        padding: 20px 0px;
-      }
-
-      .room-text {
-        padding: 20px 40px;
-        font-size: 18px;
-      }
-
-      .price {
-        font-weight: bold;
-        color: #FF0000;
-      }
-
-      #overlay {
-        position: absolute;
-        display: block;
-        width: 40%;
-        height: 50%;
-        top: 5%;
-        left: 5%;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0,0,0,0.3);
-        z-index: 2;
-        cursor: pointer;
-        padding: 20px;
-        color: white;
-        font-size: 20px;
-      }
     </style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
@@ -163,6 +168,10 @@ $(document).ready(function(){
 
     {% block rooms-gallery %}
     {% endblock %}
+
+    {% block mdc-maps %}
+    {% endblock %}
+
 
 
     <div class="container-fluid">

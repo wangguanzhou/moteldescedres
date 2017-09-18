@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^$', views.homepage),
     url(r'^reserve/$', views.reserve),
     url(r'^rooms/$', views.showrooms),
+    url(r'^maps/$', views.showmaps),
     url(r'^admin/', admin.site.urls),
 ]
 
