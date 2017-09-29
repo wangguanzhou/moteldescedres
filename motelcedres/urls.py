@@ -20,7 +20,9 @@ from django.conf.urls.static import static
 from website import views
 
 urlpatterns = [
-    url(r'^$', views.homepage),
+    url(r'^$', views.homepage_fr),
+    url(r'^fr/$', views.homepage_fr),
+    url(r'^en/$', views.homepage_en),
     url(r'^reserve/$', views.reserve),
     url(r'^rooms/$', views.showrooms),
     url(r'^maps/$', views.showmaps),

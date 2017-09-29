@@ -1,0 +1,32 @@
+{% extends "./base.html" %}
+{% load static %}
+
+{% block mdc-maps %}
+
+<div class="container-fluid" style="height:100%">
+  <div id="mdcMaps" style="height:100%">
+  </div>
+</div>
+
+
+
+<script>
+function initMap() {
+	var mdcPos = {lat: 45.3556, lng: -72.0154};
+	var map = new google.maps.Map(document.getElementById('mdcMaps'), {
+		zoom: 16,
+		center: mdcPos
+	});
+	var marker = new google.maps.Marker({
+		position: mdcPos,
+		map: map
+	});
+}
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBH2LCIB39rxKWb7-0LO6vI8V-0B6AeCiI&callback=initMap">
+</script>
+
+
+{% endblock %}
+
+

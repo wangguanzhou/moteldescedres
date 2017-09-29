@@ -8,9 +8,14 @@ from .forms import *
 
 # Create your views here.
 
-def homepage(request):
+def homepage_en(request):
     context = {}
     return render(request, 'homepage.html', context)
+
+def homepage_fr(request):
+    context = {}
+    return render(request, 'homepage_fr.html', context)
+
 
 def reserve(request):
     context = {}

@@ -1,0 +1,74 @@
+{% extends "./base_fr.html" %}
+{% load static %}
+
+{% block home-content %}
+
+<div class="container-fluid">
+
+	<div class="row" style="padding-bottom: 20px">
+		<div class="col-md-7 cover-banner">
+			<img class="img-responsive" src="{% static 'images/motel-front-01.jpg' %}">
+		</div>
+
+		<div class="col-md-5">
+			<div class="jumbotron text-center" style="padding: 20px">
+				<h3>18 chambres disponible</h3>
+				<h2 style="color: blue">819-864-4322</h2>
+				<hr>
+				<h4>Piscine, WiFi gratuit, BBQ, ...</h4>
+
+			</div>
+			<p style="font-size: 24px">Our prices (Tax not included)</p>
+			<div class="row">
+				<table class="table table-sm table-striped table-hover table-responsive pricetable" >
+					<tbody>
+						<tr class="table-info">
+							<td>Economic (1 Double-bed)</td><td class="price">$69.99</td>
+						</tr>
+						<tr>
+							<td>Standard(1 Queen-bed) </td><td class="price">$79.99</td>
+						</tr>
+						<tr>
+							<td>Standard(2 Double-beds, max. 4 persons)</td><td class="price">$89.99 ~ $109.99</td>
+						</tr>
+						<tr>
+							<td>Superior(1 Queen-bed)</td><td class="price">$129.99</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="row text-center">
+				<a href="/reserve/" class="btn btn-primary">Book My Room</a>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="row">
+		<div class="col-md-3">
+			<p style="font-size: 24px"><a href="/rooms/">Rooms<a></p>
+			<a href="/rooms/"><img class="img-responsive" src="{% static 'images/standard-1-bed-01.jpg' %}"></a>
+		</div>
+
+		<div class="col-md-3">
+			<p style="font-size: 24px">Facilities</p>
+			<img class="img-responsive" src="{% static 'images/pool-01.jpg' %}">
+		</div>
+
+		<div class="col-md-3">
+			<p style="font-size: 24px">Attractions</p>
+			<a href="#"><img class="img-responsive" src="{% static 'images/lac_des_nations.jpg' %}"></a>
+		</div>
+
+		<div class="col-md-3">
+			<p style="font-size: 24px">Map</p>
+			<a href="/maps/"><img class="img-responsive" src="{% static 'images/mdc-map.jpg' %}"></a>
+		</div>
+
+	</div>
+
+</div>
+
+
+{% endblock %}
