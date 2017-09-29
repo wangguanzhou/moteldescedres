@@ -36,10 +36,10 @@ def reserve(request):
             
             context['reserveData'] = reserveData
 
-            #sendReservationEmail(reserveData)
+            sendReservationEmail(reserveData)
 
             smsNotification = 'There is a new reservation via moteldescedres.ca. Please check your email.'
-            #sendSMSviaNexmo(smsNotification)
+            sendSMSviaNexmo(smsNotification)
 
         else:
             print('Form error')
@@ -69,14 +69,14 @@ def sendReservationEmail(reserveData):
     emailTo1 = 'moteldescedres@videotron.ca'
     emailTo2 = 'alexwang74@gmail.com'
 
-    send_mail(emailSubject, emailBody, emailFrom, [emailTo2], fail_silently =False)
+    send_mail(emailSubject, emailBody, emailFrom, [emailTo1, emailTo2], fail_silently =False)
 
 def sendSMSviaNexmo(smsContent):
     params = {
             'api_key': '8f27294a',
             'api_secret': 'Nexm0Suck3',
-            'to': '15147757799',
-            # 'to': '18199436233',
+            # 'to': '15147757799',
+            'to': '18199436233',
             'from': '12508006799',
             'text': smsContent
             }
